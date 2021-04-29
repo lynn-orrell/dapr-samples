@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Stock Exchange Simulator",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/StockExchangeSimulator/bin/Debug/net5.0/StockExchangeSimulator.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/StockExchangeSimulator",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Stock Tracker",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/StockTracker/bin/Debug/net5.0/StockTracker.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/StockTracker",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        }
+    ]
+}

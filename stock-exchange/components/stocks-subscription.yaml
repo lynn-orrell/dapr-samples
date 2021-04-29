@@ -1,0 +1,10 @@
+apiVersion: dapr.io/v1alpha1
+kind: Subscription
+metadata:
+  name: stocks-subscription
+spec:
+  topic: stockprices
+  route: StockTracker
+  pubsubname: stocksim-pubsub
+scopes:
+- stock-tracker

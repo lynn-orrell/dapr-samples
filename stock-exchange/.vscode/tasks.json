@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Dapr StockExchangeSimulator",
+            "command": "dapr",
+            "args": [
+                "run",
+                "--app-id",
+                "stock-exchange-simulator",
+                "--components-path",
+                "${workspaceFolder}/components",
+                "--dapr-http-port",
+                "5180"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Dapr StockTracker",
+            "command": "dapr",
+            "args": [
+                "run",
+                "--app-id",
+                "stock-tracker",
+                "--components-path",
+                "${workspaceFolder}/components",
+                "--app-port",
+                "5000",
+                "--dapr-http-port",
+                "5080"
+            ],
+            "problemMatcher": []
+        },
+    ]
+}
